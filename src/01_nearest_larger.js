@@ -26,6 +26,7 @@ function nearestLarger(arr, i) {
 
               return null;
             }
+            return null;
           }
 }
 
