@@ -23,8 +23,8 @@ function nearestLarger(arr, i) {
 // this returns null if we have reached each end of the array without finding
 // a greater value
             else if ((jL < 0) && (jR >= arr.length)) {
-              j = null;
-              return j;
+              // j = null;
+              // return j;
             }
           }
 }
