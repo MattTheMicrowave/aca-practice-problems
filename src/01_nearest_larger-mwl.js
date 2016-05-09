@@ -6,19 +6,19 @@ function nearestLarger(arr, i) {
 
 // var j is undefined, this will be defined later
 
-          //var j;
+          var j;
 // vars jL and jR increment out from the given index
           var jL = i - x;
           var jR = i + x;
 // this tests if the indexes on the left are greater and because it is the
 // first condition, this settles the left/right tie scenario
             if ((jL >= 0) && (arr[jL] > arr[i])) {
-              //j = jL;
+              j = jL;
               return jL;
             }
 // this tests the indexes on the right
             else if ((jR < arr.length) && (arr[jR] > arr[i])) {
-            //j = jR;
+            j = jR;
               return jR;
             }
 // this returns null if we have reached each end of the array without finding
