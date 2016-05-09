@@ -24,7 +24,7 @@ function nearestLarger(arr, i) {
 // a greater value
             else if ((jL < 0) && (jR >= arr.length)) {
 
-              return;
+              return null;
             }
           }
 }
