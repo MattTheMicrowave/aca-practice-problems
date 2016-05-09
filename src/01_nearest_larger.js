@@ -13,17 +13,18 @@ function nearestLarger(arr, i) {
 // first condition, this settles the left/right tie scenario
             if ((jL >= 0) && (arr[jL] > arr[i])) {
               j = jL;
-              return jL;
+              return j;
             }
 // this tests the indexes on the right
             else if ((jR < arr.length) && (arr[jR] > arr[i])) {
             j = jR;
-              return jR;
+              return j;
             }
 // this returns null if we have reached each end of the array without finding
 // a greater value
             else if ((jL < 0) && (jR >= arr.length)) {
-              return null;
+              j = null;
+              return j;
             }
           }
 }
