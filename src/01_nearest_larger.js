@@ -24,6 +24,12 @@ function nearestLarger(arr, i) {
 // a greater value
             //else if ((jL < 0) && (jR >= arr.length)) {
 }
+// i commented out the original elseif statement on line 25 and moved the
+// return null statemnt outside of the for loop and this passes the
+// null test, ergo, in my code, the for loop runs across the entire length of
+// the array until it finds the nearest larger value, if it does not find a
+// larger value then it exists the for loop and returns null.  
+
               return null;
 
             }
