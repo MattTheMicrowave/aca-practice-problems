@@ -28,7 +28,7 @@ function nearestLarger(arr, i) {
 // return null statemnt outside of the for loop and this passes the
 // null test, ergo, in my code, the for loop runs across the entire length of
 // the array until it finds the nearest larger value, if it does not find a
-// larger value then it exists the for loop and returns null.  
+// larger value, then it exists the for loop and returns null.  
 
               return null;
 
