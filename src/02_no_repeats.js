@@ -9,7 +9,7 @@ var outputArray = [];
 
 
         for (i = 0; i < sortedNumArray.length - 1; i++) {
-        if (sortedNumArray[i] === sortednumArray[i + 1]) {
+        if (sortedNumArray[i] = sortednumArray[i + 1]) {
 
           return false;
         } else {
