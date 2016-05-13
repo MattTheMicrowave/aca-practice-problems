@@ -20,9 +20,9 @@ function noRepeats(yearStart, yearEnd) {
 }
 
     }
-
-    return outputArray;
 }
+    return outputArray;
+
 }
 
 module.exports = noRepeats;
