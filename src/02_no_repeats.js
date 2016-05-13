@@ -1,6 +1,7 @@
 function noRepeats(yearStart, yearEnd) {
 var outputArray = [];
     for (x = yearStart; x <= yearEnd; x++) {
+      var year = x;
       function makingTestingArray(x) {
       var stringified = x.toString();
       var numArray = stringified.split("");
@@ -13,7 +14,7 @@ var outputArray = [];
           return false;
         } else {
 
-          outputArray = outputArray.push(x);
+          outputArray = outputArray.push(y);
         }
 }
 
