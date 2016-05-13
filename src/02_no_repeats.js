@@ -10,21 +10,19 @@ var fin = yearEnd;
             var stringified = x.toString();
             var numArray = stringified.split("");
             var sortedNumArray = numArray.sort();
-
+            outputArray = outputArray.push(year);
 
         for (i = 0; i < sortedNumArray.length - 1; i++) {
             if (sortedNumArray[i] = sortednumArray[i + 1]) {
 
-              return false;
-            } else {
-
-              outputArray = outputArray.push(year);
-            }
+              outputArray.pop();
+            } 
 }
 
     }
-  }
+
     return outputArray;
+}
 }
 
 module.exports = noRepeats;
