@@ -1,7 +1,7 @@
 function noRepeats(yearStart, yearEnd) {
-var outputArray = [];
-var princip = yearStart;
-var fin = yearEnd;
+    var outputArray = [];
+    var princip = yearStart;
+    var fin = yearEnd;
     // for (x = yearStart; x <= yearEnd; x++)
     //   var year = x;
       function makingTestingArray(princip, fin) {
@@ -16,7 +16,7 @@ var fin = yearEnd;
             if (sortedNumArray[i] = sortednumArray[i + 1]) {
 
               outputArray.pop();
-            } 
+            }
 }
 
     }
