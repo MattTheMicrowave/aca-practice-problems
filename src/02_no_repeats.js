@@ -14,7 +14,7 @@ var outputArray = [];
           return false;
         } else {
 
-          outputArray = outputArray.push(y);
+          outputArray = outputArray.push(year);
         }
 }
 
