@@ -1,6 +1,6 @@
 function noRepeats(yearStart, yearEnd) {
         var outputArray = [];
-    for (var x = yearStart; x <= yearEnd; x++) {
+    for (x = yearStart; x <= yearEnd; x++) {
             if (check(x)) {
 
               outputArray.push(x);
@@ -14,16 +14,18 @@ return outputArray;
 
 function check(year) {
       var yearCheck = {};
-      var parseYear = year.split("");
-      var parseYearSort = parseYear.sort();
-          for (var i = 0; i < parse.length; i++) {
-              if (yearCheck[parseYearSort[i]]) {
+      var yearString = year.toString();
+      var yearStringArray = yearString.split("");
+      // var yearStringArraySort = yearStringArray.sort();
+          for (i = 0; i < yearStringArray.length; i++) {
+              if (yearCheck[yearStringArray[i]]) {
 
                 return false;
+
               } else {
 
-                yearCheck[parseYearSort[i]] = true;
-
+                yearCheck[yearStringArray[i]] = true;
+              }
               }
 
             return true;
@@ -31,6 +33,6 @@ function check(year) {
 
 
 
-}
+
 
 module.exports = noRepeats;
