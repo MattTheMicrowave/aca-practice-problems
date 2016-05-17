@@ -1,26 +1,34 @@
 function noRepeats(yearStart, yearEnd) {
-    var outputArray = [];
-    var princip = yearStart;
-    var fin = yearEnd;
+        var outputArray = [];
+    for (var x = yearStart; x <= yearEnd; x++) {
+            if (check(x)) {
 
-      function makingTestingArray(princip, fin) {
-        for (x = princip; x <= fin; x++) {
-            var year = x;
-            var stringified = x.toString();
-            var numArray = stringified.split("");
-            var sortedNumArray = numArray.sort();
-            outputArray = outputArray.push(year);
-
-        for (i = 0; i < sortedNumArray.length - 1; i++) {
-            if (sortedNumArray[i] === sortednumArray[i + 1]) {
-
-              outputArray.pop();
+              outputArray.push(x);
             }
+            }
+
+return outputArray;
 }
 
-    }
-}
-    return outputArray;
+
+
+function check(year) {
+      var yearCheck = {};
+      var parse = year.split("").sort();
+          for (var i = 0; i < parse.length; i++) {
+              if (yearCheck[parse[i]]) {
+
+                return false;
+              } else {
+
+                yearCheck[parse[i]] = true;
+
+              }
+
+            return true;
+          }
+
+
 
 }
 
