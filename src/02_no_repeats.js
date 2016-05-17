@@ -14,14 +14,15 @@ return outputArray;
 
 function check(year) {
       var yearCheck = {};
-      var parse = year.split("").sort();
+      var parseYear = year.split("");
+      var parseYearSort = parseYear.sort();
           for (var i = 0; i < parse.length; i++) {
-              if (yearCheck[parse[i]]) {
+              if (yearCheck[parseYearSort[i]]) {
 
                 return false;
               } else {
 
-                yearCheck[parse[i]] = true;
+                yearCheck[parseYearSort[i]] = true;
 
               }
 
