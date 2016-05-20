@@ -14,9 +14,9 @@ function letterCount(str) {
 
 
 
-        return letterCountObject;
-    }
 
+    }
+    return letterCountObject;
 }
 
 module.exports = letterCount;
