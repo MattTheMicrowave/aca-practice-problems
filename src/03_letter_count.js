@@ -2,14 +2,15 @@ function letterCount(str) {
 
     var strArray = str.split("");
     var letterCountObject = {};
-    for (i = 0; i = strArray.length - 1; i++) {
-        if (letterCountObject[strArray[i]]) {
+    for (i = 0;i = strArray.length - 1; i++) {
+        var letra = strArray[i];
+        if (letterCountObject[letra]) {
 
-            letterCountObject[strArray[i]] += 1;
+            letterCountObject[letra] += 1;
 
         } else {
 
-            letterCountObject[strArray[i]] = 1;
+            letterCountObject[letra] = 1;
         }
 
 
