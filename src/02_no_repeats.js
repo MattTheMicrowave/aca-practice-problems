@@ -1,35 +1,35 @@
 function noRepeats(yearStart, yearEnd) {
-        var outputArray = [];
+    var outputArray = [];
     for (x = yearStart; x <= yearEnd; x++) {
-            if (check(x)) {
+        if (check(x)) {
 
-              outputArray.push(x);
-            }
-            }
+            outputArray.push(x);
+        }
+    }
 
-return outputArray;
+    return outputArray;
 }
 
 
 
 function check(year) {
-      var yearCheck = {};
-      var yearString = year.toString();
-      var yearStringArray = yearString.split("");
-      // var yearStringArraySort = yearStringArray.sort();
-          for (i = 0; i < yearStringArray.length; i++) {
-              if (yearCheck[yearStringArray[i]]) {
+    var yearCheck = {};
+    var yearString = year.toString();
+    var yearStringArray = yearString.split("");
+    // var yearStringArraySort = yearStringArray.sort();
+    for (i = 0; i < yearStringArray.length; i++) {
+        if (yearCheck[yearStringArray[i]]) {
 
-                return false;
+            return false;
 
-              } else {
+        } else {
 
-                yearCheck[yearStringArray[i]] = true;
-              }
-              }
+            yearCheck[yearStringArray[i]] = true;
+        }
+    }
 
-            return true;
-          }
+    return true;
+}
 
 
 
