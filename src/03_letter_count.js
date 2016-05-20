@@ -7,11 +7,12 @@ function letterCount(str) {
     for (i = 0; i < strArray.length; i++) {
         var letra = strArray[i];
 
-        if (letra === " ") {
-
-            letterCountObject[letra] = -1;
-
-        } else if (letterCountObject.hasOwnProperty(letra)) {
+        // if (letra === " ") {
+        //
+        //     letterCountObject[letra] = -1;
+        //
+        // } else
+        if (letterCountObject.hasOwnProperty(letra)) {
 
             letterCountObject[letra] += 1;
 
