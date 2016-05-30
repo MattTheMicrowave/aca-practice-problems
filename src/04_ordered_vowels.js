@@ -1,6 +1,6 @@
 function orderedVowelWords(str) {
 
-    // var lowerCaseString = str.toLowerCase();
+    var lowerCaseString = str.toLowerCase();
     var wordArray = lowerCaseString.split(" ");
     var outputString = "";
 
