@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "array-flatten": "^2.1.0",
     "jasmine": "^2.4.1"
   }
 }
