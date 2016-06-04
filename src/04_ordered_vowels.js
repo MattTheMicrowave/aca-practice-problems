@@ -2,50 +2,39 @@ function orderedVowelWords(str) {
 
     var lowerCaseString = str.toLowerCase();
     var wordArray = lowerCaseString.split(" ");
-    var outputString = "";
+    var filteredWordArray = wordArray.filter(orderedVowelWord);
+    var outputArray = filteredWordArray.join(' ');
 
-    for (j = 0; j < wordArray.length; j++) {
-        if (orderedVowelWord(wordArray[j])) {
 
-            outputString += outputString + wordArray[j];
-
-        }
-    }
-
-    return outputString;
+    return outputArray;
 }
 
 function orderedVowelWord(word) {
-    var stringA = "";
-
+    var vowel;
     for (i = 0; i < word.length; i++) {
-        if  ( word.charAt(i) == 'a' ||
-              word.charAt(i) == 'e' ||
-              word.charAt(i) == 'i' ||
-              word.charAt(i) == 'o' ||
-              word.charAt(i) == 'u' )
-            {
-             stringA += stringA + word.charAt(i);
+        if (isVowel(word.charAt(i))) {
+            if (vowel) {
+                var nextVowel = word.charAt(i);
+                  if (vowel <= nextVowel) {
+                      var vowel = nextVowel;
+                  } else if (vowel >= nextVowel) {
+                        return false;
+                    }
+            } else {
+              var vowel = word.charAt(i);
+              }
         }
     }
-
-    var arrayB = stringA.split("");
-    var sortedArrayB = arrayB.sort();
-    var casiStringB = sortedArrayB.join();
-    var stringB = casiStringB.replace(/,/g, '');
-
-    if (stringA == stringB) {
-
-        return true;
-
-    }  else {
-
-        return false;
-
-    }
+    return true;
 }
 
-
+function isVowel(x) {
+    if (x == 'a' || x == 'e' || x == 'i' || x == 'o' || x == 'u') {
+        return true;
+    } else {
+        return false;
+    }
+}
 
 
 
