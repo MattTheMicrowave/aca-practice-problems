@@ -15,18 +15,23 @@ function wonkyCoins(n) {
 function exchange(n) {
     var coinArray = [Math.floor(n/2), Math.floor(n/3), Math.floor(n/4)];
     var filteredCoinArray = coinArray.filter(greaterThanZero);
-    while (filteredCoinArray.length > 0) {
 
+    if (filteredCoinArray.length > 0) {
+        var filteredCoinSubArray;
         for (i = 0; i = coinArray.length - 1; i++) {
             if (coinArray[i] > 0) {
                 coinArray[i] = exchange(i);
-                filteredCoinArray = coinArray[i].filter(greaterThanZero);
+                coinArray = coinArray.concat(coinArray[i]);
+                filteredCoinSubArray = coinArray[i].filter(greaterThanZero);
+                while (filteredCoinSubArray.length > 0) {
+                        return exchange(i);
+                }
             }
         }
     }
 
     return coinArray;
-  }
+}
 
 function greaterThanZero (index) {
 
