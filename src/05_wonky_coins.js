@@ -1,15 +1,20 @@
-var flatten = require('array-flatten');
+var flatten = require('array-flatten');  // brings in the function to 'unnest'
+// nested functions
 
 function wonkyCoins(n) {
-    var numberOfCoins;
-    var outPutArray
+    var numberOfCoins;  // returns length of flattened array after all of the
+    // coins have converged down to 0
+    var outPutArray; // brings in the array where each coin is converged to
+    // zero by exhange()
     if (n == 0) {
-        numberOfCoins = 1;
+        numberOfCoins = 1; // when n is zero, there is only 1 coin
         return numberOfCoins;
     } else {
-        var outPutArray = exchange(n);
-        var numberOfCoins = outPutArray.length;
-        return numberOfCoins;
+        var outPutArray = exchange(n); // assigns the returned array from
+        // exchange() to outPutArray
+        var numberOfCoins = outPutArray.length; // correlates each index, of
+        // which all will be zero, to a value of 1 coin
+        return numberOfCoins; // returns the count of coins
       }
 }
 
