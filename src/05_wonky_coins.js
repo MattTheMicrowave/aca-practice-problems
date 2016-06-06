@@ -20,14 +20,21 @@ function wonkyCoins(n) {
 
 function exchange(n) {
     var coinArray = [Math.floor(n/2), Math.floor(n/3), Math.floor(n/4)];
-
+    // makes an array that takes the integer argument and splits it into
+    // 3 coins of value n/2, n/3, n/4
     while (coinArray.filter(greaterThanZero).length > 0) {
-
+    // tests if there are numbers greater than 1 in the array
         for (i = 0; i = coinArray.length - 1; i++) {
+            // iterates over the array
             if (coinArray[i] >= 1) {
+                // locates the indices with values equal to
+                // or greater than 1
                 coinArray[i] = exchange(coinArray[i]);
-                var addArray = flatten(coinArray[i]);
-                coinArray = coinArray.concat(addArray);
+                // calls the exchange function on the values
+                // in the array that are one or greater
+
+                coinArray = flatten(coinArray);
+                // flattens the array so that it is unnested
 
             }
         }
