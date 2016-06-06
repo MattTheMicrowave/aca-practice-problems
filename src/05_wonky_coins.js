@@ -1,35 +1,32 @@
 var flatten = require('array-flatten');
 
 function wonkyCoins(n) {
-    var setUpArray = exchange(n);
-    var outPutArray = [];
-    for (i = 0; i < setUpArray.length; i++) {
-        for (j = 0; j < setUpArray[i].length; j++) {
-              outPutArray.push(setUpArray[i][j]);
-        }
-    }
-    var numberOfCoins = outPutArray.length;
-    return numberOfCoins;
+    var numberOfCoins;
+    var outPutArray
+    if (n == 0) {
+        numberOfCoins = 1;
+        return numberOfCoins;
+    } else {
+        var outPutArray = exchange(n);
+        var numberOfCoins = outPutArray.length;
+        return numberOfCoins;
+      }
 }
 
 function exchange(n) {
     var coinArray = [Math.floor(n/2), Math.floor(n/3), Math.floor(n/4)];
-    var filteredCoinArray = coinArray.filter(greaterThanZero);
 
-    if (filteredCoinArray.length > 0) {
-        var filteredCoinSubArray;
+    while (coinArray.filter(greaterThanZero).length > 0) {
+
         for (i = 0; i = coinArray.length - 1; i++) {
-            if (coinArray[i] > 0) {
-                coinArray[i] = exchange(i);
-                coinArray = coinArray.concat(coinArray[i]);
-                filteredCoinSubArray = coinArray[i].filter(greaterThanZero);
-                while (filteredCoinSubArray.length > 0) {
-                        return exchange(i);
-                }
+            if (coinArray[i] >= 1) {
+                coinArray[i] = exchange(coinArray[i]);
+                var addArray = flatten(coinArray[i]);
+                coinArray = coinArray.concat(addArray);
+
             }
         }
     }
-
     return coinArray;
 }
 
